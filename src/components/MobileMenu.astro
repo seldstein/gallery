@@ -1,13 +1,20 @@
 ---
-import Logo from "./Logo.astro";
 import Nav from "./Nav.astro";
+import Social from "./Social.astro";
 ---
 
 <details>
   <summary>Menu</summary>
   <div class="menu-content">
-    <Logo />
-    <Nav />
+    <div>
+      <div class="title">Navigation</div>
+      <Nav />
+    </div>
+    
+    <div class="social">
+      <div class="title">Social</div>
+      <Social />
+    </div>
   </div>
 </details>
 
@@ -25,6 +32,9 @@ import Nav from "./Nav.astro";
   .menu-content {
     /* Without this, content wraps prematurely */
     min-width: 100%;
+    display: grid;
+    justify-content: flex-start;
+    gap: 1rem;
     margin-top: 1rem;
     padding: 1rem;
     background-color: #fff; /* Set a background color for the menu */
@@ -38,5 +48,9 @@ import Nav from "./Nav.astro";
   details[open] .menu-content {
     /* Seems to place in the center */
     translate: -50%;
+  }
+
+  .title {
+    font-weight: 700;
   }
 </style>
