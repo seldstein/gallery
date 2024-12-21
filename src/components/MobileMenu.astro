@@ -39,14 +39,15 @@ import Social from "./Social.astro";
     /* Positioning */
     position: absolute;
     z-index: 1;
-    translate: 1000%;
+    /* translate: 1000%; */
+    transform: translateX(1000%); /* Start off-screen to the left */
     transition-duration: 0.25s;
   }
 
   details[open] .menu-content {
-    /* Seems to place in the center */
-    translate: -100%;
-    left: 102%;
+    /* translate: -100%;
+    left: 102%; */
+    transform: translateX(-68%);
   }
 
   .title {
