@@ -29,21 +29,18 @@ import Social from "./Social.astro";
 
   /* Slide menu in from the side */
   .menu-content {
-    display: grid;
-    justify-content: flex-start;
-    gap: 1rem;
     margin-top: 1rem;
     padding: 1rem;
     background-color: #fff; /* Set a background color for the menu */
     box-shadow: #999 0px 1px 4px;
 
     height: 100vh;
+    min-width: 20rem;
     /* Positioning */
     /* position: absolute; */
     position: fixed;
     z-index: 1;
-    /* translate: 1000%; */
-    /* transform: translateX(1000%); */
+    /* Doesn't work on mobile */
     left: -100%; /* Start off-screen */
     transition: transform 0.25s ease;
   }
