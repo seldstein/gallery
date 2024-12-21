@@ -36,12 +36,16 @@ import Social from "./Social.astro";
     padding: 1rem;
     background-color: #fff; /* Set a background color for the menu */
     box-shadow: #999 0px 1px 4px;
+
+    height: 100vh;
     /* Positioning */
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     z-index: 1;
     /* translate: 1000%; */
-    transform: translateX(1000%); /* Start off-screen to the left */
-    transition-duration: 0.25s;
+    /* transform: translateX(1000%); */
+    left: -100%; /* Start off-screen */
+    transition: transform 0.25s ease;
   }
 
   details {
@@ -51,7 +55,8 @@ import Social from "./Social.astro";
   details[open] .menu-content {
     /* translate: -100%;
     left: 102%; */
-    transform: translateX(-68%);
+    transform: translateX(-100%);
+    left: 100%;
   }
 
   .title {
