@@ -1,0 +1,42 @@
+---
+import Logo from "./Logo.astro";
+import Nav from "./Nav.astro";
+---
+
+<details>
+  <summary>Menu</summary>
+  <div class="menu-content">
+    <Logo />
+    <Nav />
+  </div>
+</details>
+
+<style>
+  summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Slide menu in from the side */
+  .menu-content {
+    /* Without this, content wraps prematurely */
+    min-width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff; /* Set a background color for the menu */
+    box-shadow: #999 0px 1px 4px;
+    position: absolute;
+    z-index: 1;
+    translate: 1000%;
+    transition-duration: 0.25s;
+  }
+
+  details[open] .menu-content {
+    /* Seems to place in the center */
+    translate: -50%;
+  }
+</style>

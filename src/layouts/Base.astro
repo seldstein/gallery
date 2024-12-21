@@ -2,7 +2,7 @@
 // Components
 import Head from "../components/Head.astro";
 import Skiplink from "../components/Skiplink.astro";
-import Header from "../components/Header.astro";
+import MobileHeader from "../components/MobileHeader.astro";
 import Footer from "../components/Footer.astro";
 
 // Props
@@ -14,7 +14,7 @@ const { title, description } = Astro.props;
 
   <body>
     <Skiplink />
-  <Header/>
+    <MobileHeader />
     <main id="main-content">
       <h1>{title}</h1>
       <slot />

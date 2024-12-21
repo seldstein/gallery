@@ -1,0 +1,27 @@
+---
+import Logo from "./Logo.astro";
+import MobileMenu from "./MobileMenu.astro";
+---
+
+<header>
+  <Logo />
+  <MobileMenu />
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Slick to top */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 850px) {
+    header {
+      display: none;
+    }
+  }
+</style>
