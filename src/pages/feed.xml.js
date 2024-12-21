@@ -1,6 +1,7 @@
 // https://docs.astro.build/en/guides/rss/
 import { getCollection } from "astro:content";
 import { site } from "../../config.js";
+import { sortCollectionByDate } from "../scripts/utils.js";
 
 export async function GET() {
   const posts = await getCollection("blog");
