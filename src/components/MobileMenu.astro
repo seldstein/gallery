@@ -29,8 +29,6 @@ import Social from "./Social.astro";
 
   /* Slide menu in from the side */
   .menu-content {
-    /* Without this, content wraps prematurely */
-    min-width: 100%;
     display: grid;
     justify-content: flex-start;
     gap: 1rem;
@@ -38,6 +36,7 @@ import Social from "./Social.astro";
     padding: 1rem;
     background-color: #fff; /* Set a background color for the menu */
     box-shadow: #999 0px 1px 4px;
+    /* Positioning */
     position: absolute;
     z-index: 1;
     translate: 1000%;
@@ -46,7 +45,8 @@ import Social from "./Social.astro";
 
   details[open] .menu-content {
     /* Seems to place in the center */
-    translate: -50%;
+    translate: -100%;
+    left: 102%;
   }
 
   .title {
