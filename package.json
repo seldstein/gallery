@@ -1,0 +1,18 @@
+{
+  "name": "Gallery",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "open -a 'Google Chrome' http://localhost:4321/ && astro dev",
+    "build": "astro build && jampack ./dist",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.1.1"
+  },
+  "devDependencies": {
+    "@divriots/jampack": "^0.25.0"
+  }
+}
